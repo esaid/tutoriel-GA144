@@ -24,3 +24,43 @@
 # dans le bloc 848 
 # ajouter le code pour sauvegarder le fichier binaire du stream 
 # ( -- file stream.bin ) file load   
+
+
+
+
+
+
+DB004 arrayForth User's Manual
+Copyright© 2010-2011 GreenArrays, Inc. 10/30/13 21
+4.2.2 HTML Listings
+Load the HTML utility with html load . The default output filename is cf.html . You can change this name from
+the command prompt if you like by typing, for example, named my.html . Then type first last+2 run , where
+first and last+2 are block numbers. The result is an html file with shadow blocks on the left side and code blocks
+on the right. For example, to produce a listing of an entire colorForth floppy image, type 18 1440 run . The colors
+have been altered only so that the background can be white and comments black. This saves black toner or ink when
+printing the listings.
+4.2.3 Index Listing
+Load the indexing utility with index load . The default output filename is index.txt . You can change this name
+from the command prompt if you like by typing, for example, named my.txt . Then type first last+2 run ,
+where first and last+2 are block numbers. An index is the top line (approximately) of each block in the range
+specified. No colors are indicated, just text.
+4.2.4 PNG Screen Captures
+The PNG utility is resident in colorForth. You can capture the screen as a .png file at any time by typing png at the
+command prompt. A png file will be created with the default name of OkadOut.gds . You will probably want to
+rename this to something more appropriate, with a .png extension.
+PNG is appropriate when the screen contains graphics other than a source block. The HTML utility is more suitable for
+source code.
+4.3 The Bonus Materials
+Some of the "study material" supplied on this disk image may be executed to do useful things, as follow:
+selftest (n) If the ATS materials supplied in 480 to 720 are still intact, this phrase will run all relevant ATS
+tests on the chip whose IDE COM port number is given. Note that in order to test the Host chip in this
+way, its no-boot jumper J26 must be installed before running selftest or the IDE will hang.
+autotest (n) Again if the ATS materials are intact, this will cause the Host chip to run ATS tests on the
+Target chip using the same general procedure as does the factory chip tester, by running tests
+through the synchronous connection between each chip's node 300. In addition, it runs SERDES test
+between Host node 701 and Target node 001, transferring a quarter million words of known unique
+values each way and verifying correct receipt with line turn-arounds.
+450 load Host polyFORTH IDE boot procedure. Install no boot jumper before loading this.
+460 load Burns polyFORTH into flash.
+1140 load Host eForth IDE boot procedure. Install no-boot jumper before loading this.
+1190 load Burns eForth into flash, for example when updating eForth.
