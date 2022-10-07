@@ -19,3 +19,8 @@
 # 848 load  --> sauvegarde dans la flash
 # le cavalier J26 est enleve a la fin de la programmation
 # et lorsque l'on fait un reset , le code est dans la flash !  et  la LED clignote
+
+
+# dans le bloc 848 
+# ajouter le code pour sauvegarder le fichier binaire du stream 
+# ( -- file stream.bin ) file load   
