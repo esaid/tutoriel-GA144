@@ -1,4 +1,21 @@
 # sauvegarder programme dans la flash 
 # 848 changer oldflash par newflash
 # 850 changer oldflash par newflash/
+
+
+# 848 setup application 
+# numero_du_node +node Adresse /p
+# exemple   pour le node 500 , et l'adresse est 0   ( adresse de boucle , dans le code pour le bloc 858 ) 
+# 500 +node   0 /p
+
+# dans le code pour le node 500  , exemple bloc 858 
+# : pause 4000 for 1000 for next next ;
+# demohl 0E  30000 !b pause 20000 !b pause ;
+# boucle 00  demohl boucle ;
+
+
+
+# le cavalier J26 est present au debut 
 # 848 load  --> sauvegarde dans la flash
+# le cavalier J26 est enleve a la fin de la programmation
+# et lorsque l'on fait un reset , le code est dans la flash !  et  la LED clignote
