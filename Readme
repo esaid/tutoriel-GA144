@@ -27,7 +27,8 @@
 
 
 
-
+# modifier souslinux la latence
+# setserial /dev/ttyUSB0 low_latency
 
 
 DB004 arrayForth User's Manual
